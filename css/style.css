@@ -38,6 +38,7 @@ body {
     height: 100vh;
     display: flex;
     background-color: #272727;
+    overflow: hidden;
 }
 
 .main-container .col-1 {
@@ -241,10 +242,10 @@ body {
 
 .main-container .col-3 .active-chat {
     width: 100%;
-    min-height: 200px;
     height: calc(100% - 115px);
     background-image: url(../img/wa-bg.png);
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .main-container .col-3 .active-chat .chat-container-centered {
@@ -252,14 +253,10 @@ body {
     height: 100%;
     margin: 0 auto;
     padding: 10px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 10px;
-    
 }
 
 .main-container .col-3 .active-chat .chat-container-centered .my-message {
+    margin: 5px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -284,7 +281,7 @@ body {
 }
 
 .message-container {
-    max-width: 550px;
+    max-width: 500px;
     padding: 5px 10px;
     display: flex;
     flex-direction: column;
@@ -324,6 +321,7 @@ body {
 }
 
 .main-container .col-3 .text-input .text-message input {
+    padding: 10px;
     width: 100%;
     border: none;
     background-color: #1c1c1c00;

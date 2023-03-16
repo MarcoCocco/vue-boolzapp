@@ -143,6 +143,7 @@ body {
 
 .main-container .col-2 .chat-list {
     height: calc(100% - 120px);
+    padding: 0 10px;
     margin: 20px 3px;
     margin-bottom: 50px;
     overflow: auto;
@@ -157,6 +158,11 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+}
+
+.main-container .col-2 .chat-list .single-chat:hover {
+    background-color: #4d4d4d;
+    border-radius: 5px;
 }
 
 .main-container .col-2 .chat-list .single-chat .profile-img {

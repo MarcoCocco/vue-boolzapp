@@ -149,7 +149,7 @@ body {
 /*------------------------------*/
 
 .main-container .col-3 {
-    min-width: 200px;
+    min-width: 300px;
     width: 75%;
     display: flex;
     flex-direction: column;
@@ -205,13 +205,60 @@ body {
     min-height: 200px;
     height: calc(100% - 115px);
     background-image: url(../img/wa-bg.png);
-    opacity: .1;
 }
 
 .main-container .col-3 .active-chat .chat-container-centered {
-    max-width: 800px;
+    max-width: 900px;
     height: 100%;
     margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.main-container .col-3 .active-chat .chat-container-centered .my-message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.main-container .col-3 .active-chat .chat-container-centered .his-message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.time-send {
+    display: flex;
+    gap: 5px;
+    align-self: self-end;
+    font-size: .8em;
+    opacity: .4;
+}
+
+.message-container {
+    max-width: 550px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 8px;
+    font-size: .8em;
+    position: relative;
+}
+
+.green {
+    background-color: #025c4c;
+}
+
+.grey {
+    background-color: #373737;
 }
 
 .main-container .col-3 .text-input {
@@ -235,7 +282,7 @@ body {
     width: 100%;
 }
 
-.main-container .col-3 .text-input .text-message input{
+.main-container .col-3 .text-input .text-message input {
     width: 100%;
     border: none;
     background-color: #1c1c1c00;

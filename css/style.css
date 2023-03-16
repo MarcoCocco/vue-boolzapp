@@ -34,6 +34,7 @@ body {
 }
 
 .main-container .col-1 {
+    min-width: 50px;
     width: 50px;
     background-color: #202020;
     border-right: 1px solid #1c1c1c;
@@ -42,7 +43,7 @@ body {
 /*------------------------------*/
 
 .main-container .col-2 {
-    min-width: 200px;
+    min-width: 250px;
     width: 25%;
     border-right: 1px solid #1c1c1c;
 }
@@ -129,7 +130,12 @@ body {
 
 .main-container .col-2 .chat-list .single-chat .profile-info {
     flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
+
+.main-container .col-2 .chat-list .single-chat .time {}
 
 .main-container .col-2 .chat-list .single-chat .profile-info p {
     margin-top: 5px;

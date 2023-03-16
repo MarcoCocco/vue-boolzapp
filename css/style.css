@@ -135,8 +135,6 @@ body {
     text-overflow: ellipsis;
 }
 
-.main-container .col-2 .chat-list .single-chat .time {}
-
 .main-container .col-2 .chat-list .single-chat .profile-info p {
     margin-top: 5px;
     font-size: .8em;
@@ -160,7 +158,46 @@ body {
 .main-container .col-3 .active-chat-header {
     width: 100%;
     height: 65px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid #1c1c1c;
+}
+
+.main-container .col-3 .active-chat-header .left-header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-container .col-3 .active-chat-header .left-header .active-profile-img {
+    height: 100%;
+}
+
+.main-container .col-3 .active-chat-header .left-header .active-profile-img img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.main-container .col-3 .active-chat-header .right-header {
+    padding: 0 20px;
+    display: flex;
+    gap: 50px;
+}
+
+.line {
+    display: flex;
+}
+
+.line hr{
+    border: none;
+    border: 1px solid #616060;
+}
+
+.main-container .col-3 .active-chat-header .right-header .fa-magnifying-glass{
+    transform: scaleX(-1);
 }
 
 .main-container .col-3 .active-chat {

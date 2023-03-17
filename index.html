@@ -62,7 +62,7 @@
 
                 <div class="chat-list">
 
-                    <div v-for="(contact, index) in contacts" @click="changeContactIndex(index)" class="single-chat">
+                    <div v-for="(contact, index) in contacts" @click="changeContactIndex(index)" :class="{ 'single-chat-selected': index === selectedContactIndex }" class="single-chat">
                         <div class="profile-img">
                             <img :src="contact.avatar" alt="">
                         </div>

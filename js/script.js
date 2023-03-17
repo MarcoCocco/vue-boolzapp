@@ -172,6 +172,7 @@ createApp({
       ],
 
       chatContactIndex: 0,
+      selectedContactIndex: -1,
 
     }
 
@@ -182,6 +183,7 @@ createApp({
     changeContactIndex(contactIndex) {
 
       this.chatContactIndex = contactIndex;
+      this.selectedContactIndex = contactIndex;
 
     },
 

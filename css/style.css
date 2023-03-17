@@ -23,14 +23,14 @@ body {
     background-color: #616060;
 }
 
-.fa-solid:hover {
-    transform: scale(1.3);
+.hover-icon i {
+    padding: 10px 15px;
 }
 
-.fa-regular:hover {
-    transform: scale(1.3);
+.hover-icon:hover {
+    background-color: #353535;
+    border-radius: 5px;
 }
-
 /*---------------------------------------*/
 
 .main-container {
@@ -67,17 +67,18 @@ body {
     gap: 30px;
 }
 
-.main-container .col-1 .profile-setting .my-profile{
+.main-container .col-1 .profile-setting .my-profile {
     width: 50%;
 }
 
-.main-container .col-1 .profile-setting .my-profile img{
+.main-container .col-1 .profile-setting .my-profile img {
     width: 100%;
     border-radius: 50%;
 }
 
-.main-container .col-1 .profile-setting .my-profile img:hover{
-    transform: scale(1.3);
+.main-container .col-1 .profile-setting .my-profile img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 /*------------------------------*/
@@ -102,10 +103,11 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
 }
 
-.main-container .col-2 .chat-options .options .option-icons i {
-    margin-left: 50px;
+.main-container .col-2 .chat-options .options h2 {
+    flex-grow: 1;
 }
 
 .main-container .col-2 .chat-options .search-chat-input {
@@ -225,6 +227,10 @@ body {
 .main-container .col-3 .active-chat-header .left-header .active-profile-img img {
     height: 100%;
     border-radius: 50%;
+}
+
+.main-container .col-3 .active-chat-header .left-header .active-name .last-access {
+    font-size: .8em;
 }
 
 .main-container .col-3 .active-chat-header .right-header {

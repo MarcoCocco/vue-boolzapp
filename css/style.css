@@ -153,7 +153,7 @@ body {
 
 .main-container .col-2 .chat-list .single-chat {
     margin-bottom: 10px;
-    padding: 0 20px;
+    padding: 5px 20px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -173,6 +173,8 @@ body {
 
 .main-container .col-2 .chat-list .single-chat .profile-img {
    width: 50px;
+   display: flex;
+   align-items: center;
 }
 
 .main-container .col-2 .chat-list .single-chat .profile-img img {

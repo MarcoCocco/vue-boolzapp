@@ -258,30 +258,30 @@ body {
     background-image: url(../img/wa-bg.png);
     overflow-y: auto;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .main-container .col-3 .active-chat .chat-container-centered {
     max-width: 900px;
+    min-height: 0;
     height: 100%;
     margin: 0 auto;
     padding: 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    gap: 5px;
 }
 
-.message-container {
-    max-width: 500px;
+.main-container .col-3 .active-chat .chat-container-centered .message-container {
+    max-width: 65%;
     padding: 5px 10px;
     border-radius: 8px;
     font-size: .8em;
-    position: relative;
 }
 
 .sent {
-    margin-top: 10px;
-    margin: 2px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-self: flex-end;
@@ -289,9 +289,6 @@ body {
 }
 
 .recived {
-    margin-top: 5px;
-    margin: 2px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-self: flex-start;

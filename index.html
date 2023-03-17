@@ -46,10 +46,10 @@
 
                     <div class="options">
                         <h2>Chat</h2>
-                        
-                            <div class="hover-icon"><i class="fa-solid fa-pen-to-square"></i></div>
-                            <div class="hover-icon"><i class="fa-solid fa-ellipsis"></i></div>
-                        
+
+                        <div class="hover-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+                        <div class="hover-icon"><i class="fa-solid fa-ellipsis"></i></div>
+
                     </div>
                     <div class="search-chat-input">
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
@@ -62,168 +62,12 @@
 
                 <div class="chat-list">
 
-                    <div class="single-chat">
+                    <div v-for="contact in contacts" class="single-chat">
                         <div class="profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="contact.avatar" alt="">
                         </div>
                         <div class="profile-info">
-                            <h4>Michele</h4>
-                            <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            <p>12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-chat">
-                        <div class="profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <h4>Michele</h4>
-                            <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            <p>12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-chat">
-                        <div class="profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <h4>Michele</h4>
-                            <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            <p>12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-chat">
-                        <div class="profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <h4>Michele</h4>
-                            <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            <p>12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-chat">
-                        <div class="profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <h4>Michele</h4>
-                            <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            <p>12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-chat">
-                        <div class="profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <h4>Michele</h4>
-                            <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            <p>12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-chat">
-                        <div class="profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <h4>Michele</h4>
-                            <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            <p>12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-chat">
-                        <div class="profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <h4>Michele</h4>
-                            <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            <p>12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-chat">
-                        <div class="profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <h4>Michele</h4>
-                            <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            <p>12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-chat">
-                        <div class="profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <h4>Michele</h4>
-                            <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            <p>12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-chat">
-                        <div class="profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <h4>Michele</h4>
-                            <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            <p>12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-chat">
-                        <div class="profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <h4>Michele</h4>
-                            <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            <p>12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-chat">
-                        <div class="profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <h4>Michele</h4>
+                            <h4>{{contact.name}}</h4>
                             <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
                         </div>
                         <div class="time">
@@ -269,186 +113,45 @@
 
                     <div class="chat-container-centered">
 
-                        <div class="his-message">
-
-                            <div class="message-container grey">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
-                                    nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
+                        <div class="message-container recived">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
+                                doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
+                                nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
+                            <div class="time-send">
+                                <p>12:00</p>
+                                <i class="fa-solid fa-check-double"></i>
                             </div>
-
-                            <div class="message-container grey">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
-                            </div>
-
                         </div>
 
-                        <div class="my-message">
-
-                            <div class="message-container green">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
-                                    nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
+                        <div class="message-container recived">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
+                                doloribus aliquid eligendi modi.</p>
+                            <div class="time-send">
+                                <p>12:00</p>
+                                <i class="fa-solid fa-check-double"></i>
                             </div>
-
-                            <div class="message-container green">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
-                            </div>
-
                         </div>
 
-                        <div class="his-message">
-
-                            <div class="message-container grey">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
-                                    nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
+                        <div class="message-container sent">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
+                                doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
+                                nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
+                            <div class="time-send">
+                                <p>12:00</p>
+                                <i class="fa-solid fa-check-double"></i>
                             </div>
-
-                            <div class="message-container grey">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
-                            </div>
-
                         </div>
 
-                        <div class="my-message">
-
-                            <div class="message-container green">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
-                                    nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
+                        <div class="message-container sent">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
+                                doloribus aliquid eligendi modi.</p>
+                            <div class="time-send">
+                                <p>12:00</p>
+                                <i class="fa-solid fa-check-double"></i>
                             </div>
-
-                            <div class="message-container green">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
-                            </div>
-
                         </div>
 
-                        <div class="his-message">
 
-                            <div class="message-container grey">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
-                                    nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
-                            </div>
-
-                            <div class="message-container grey">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="his-message">
-
-                            <div class="message-container grey">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
-                                    nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
-                            </div>
-
-                            <div class="message-container grey">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="my-message">
-
-                            <div class="message-container green">
-                                <p>Lorem ipsum. Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
-                            </div>
-
-                            <div class="message-container green">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="his-message">
-
-                            <div class="message-container grey">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                    doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
-                                    nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
-                            </div>
-
-                            <div class="message-container grey">
-                                <p>Lorem ipsum modi.</p>
-                                <div class="time-send">
-                                    <p>12:00</p>
-                                    <i class="fa-solid fa-check-double"></i>
-                                </div>
-                            </div>
-
-                        </div>
 
                     </div>
 

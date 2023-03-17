@@ -62,16 +62,18 @@
 
                 <div class="chat-list">
 
-                    <div v-for="contact in contacts" class="single-chat">
+                    <div v-for="(contact, index) in contacts" @click="changeContactIndex(index)" class="single-chat">
                         <div class="profile-img">
                             <img :src="contact.avatar" alt="">
                         </div>
                         <div class="profile-info">
                             <h4>{{contact.name}}</h4>
-                            <p><i class="fa-solid fa-check-double"></i> Ultimo messaggio inviato</p>
+                            <p><i :style="contacts[index].messages[contacts[index].messages.length - 1].status === 'received' ? {display: 'none'} : {display: 'inlineBlock'}"
+                                    class="fa-solid fa-check-double"></i> {{
+                                contacts[index].messages[contacts[index].messages.length - 1].message }}</p>
                         </div>
                         <div class="time">
-                            <p>12:00</p>
+                            <p>{{ contacts[index].messages[contacts[index].messages.length - 1].time }}</p>
                         </div>
                     </div>
 
@@ -86,10 +88,10 @@
                     <div class="left-header">
 
                         <div class="active-profile-img">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="contacts[chatContactIndex].avatar" alt="">
                         </div>
                         <div class="active-name">
-                            <h4>Michele</h4>
+                            <h4>{{contacts[chatContactIndex].name}}</h4>
                             <div class="last-access">
                                 <p>Online</p>
                             </div>
@@ -113,98 +115,13 @@
 
                     <div class="chat-container-centered">
 
-                        <div class="message-container recived">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
-                                nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
+                        <div v-for="messageSent in contacts[chatContactIndex].messages" class="message-container"
+                            :class="messageSent.status === 'sent' ? 'sent' : 'received' ">
+                            <p>{{ messageSent.message }}</p>
                             <div class="time-send">
-                                <p>12:00</p>
-                                <i class="fa-solid fa-check-double"></i>
-                            </div>
-                        </div>
-
-                        <div class="message-container recived">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                doloribus aliquid eligendi modi.</p>
-                            <div class="time-send">
-                                <p>12:00</p>
-                                <i class="fa-solid fa-check-double"></i>
-                            </div>
-                        </div>
-
-                        <div class="message-container sent">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
-                                nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                            <div class="time-send">
-                                <p>12:00</p>
-                                <i class="fa-solid fa-check-double"></i>
-                            </div>
-                        </div>
-
-                        <div class="message-container sent">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
-                                nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                            <div class="time-send">
-                                <p>12:00</p>
-                                <i class="fa-solid fa-check-double"></i>
-                            </div>
-                        </div>
-
-                        <div class="message-container sent">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
-                                nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                            <div class="time-send">
-                                <p>12:00</p>
-                                <i class="fa-solid fa-check-double"></i>
-                            </div>
-                        </div>
-
-                        <div class="message-container recived">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
-                                nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                            <div class="time-send">
-                                <p>12:00</p>
-                                <i class="fa-solid fa-check-double"></i>
-                            </div>
-                        </div>
-
-                        <div class="message-container recived">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                doloribus aliquid eligendi modi.</p>
-                            <div class="time-send">
-                                <p>12:00</p>
-                                <i class="fa-solid fa-check-double"></i>
-                            </div>
-                        </div>
-
-                        <div class="message-container sent">
-                            <p>praesentium quae impedit libero omnis repudiandae
-                                nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                            <div class="time-send">
-                                <p>12:00</p>
-                                <i class="fa-solid fa-check-double"></i>
-                            </div>
-                        </div>
-
-                        <div class="message-container sent">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis inventore
-                                doloribus aliquid eligendi modi, praesentium quae impedit libero omnis repudiandae
-                                nesciunt? Corrupti aliquid, veniam vel nulla et asperiores voluptate.</p>
-                            <div class="time-send">
-                                <p>12:00</p>
-                                <i class="fa-solid fa-check-double"></i>
-                            </div>
-                        </div>
-
-                        <div class="message-container sent">
-                            <p>Lorem ipsum dolor sit amet veniam vel nulla et asperiores voluptate.</p>
-                            <div class="time-send">
-                                <p>12:00</p>
-                                <i class="fa-solid fa-check-double"></i>
+                                <p>{{ messageSent.time }}</p>
+                                <i :style="messageSent.status === 'received' ? {display: 'none'} : {display: 'block'}"
+                                    class="fa-solid fa-check-double"></i>
                             </div>
                         </div>
 

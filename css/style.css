@@ -264,8 +264,7 @@ body {
 
 .main-container .col-3 .active-chat .chat-container-centered {
     max-width: 900px;
-    min-height: 0;
-    height: 100%;
+    width: 100%;
     margin: 0 auto;
     padding: 10px 0;
     display: flex;
@@ -300,14 +299,14 @@ body {
     border-bottom: 10px solid #025c4c; 
 }
 
-.recived {
+.received {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
     background-color: #373737;
 }
 
-.recived:before {
+.received:before {
     content: ""; 
     position: absolute; 
     transform: rotate(45deg);

@@ -177,7 +177,9 @@ createApp({
       ],
 
       chatContactIndex: 0,
+
       selectedContactIndex: -1,
+      
       newMessage: '',
 
     }
@@ -197,11 +199,15 @@ createApp({
 
       if (this.newMessage !== '') {
 
+        let date = new Date();
+        let options = { hour: 'numeric', minute: 'numeric' };
+        let time = date.toLocaleTimeString('it-IT', options);
+
         const newMessageObj = {
 
-          time: '00:00',
+          time: time,
           message: this.newMessage,
-          status: 'sent'
+          status: 'sent',
 
         };
 
@@ -210,9 +216,18 @@ createApp({
 
       }
 
-      
-
     },
+
+    created() {
+
+      setInterval(() => {
+
+        let date = new Date();
+
+        this.currentTime = date.toLocaleTimeString();
+
+      }, 1000);
+    }
 
   }
 

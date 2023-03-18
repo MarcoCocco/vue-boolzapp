@@ -166,13 +166,19 @@ createApp({
               time: '15:51',
               message: 'OK!!',
               status: 'received'
-            }
+            },
+
+
           ],
+
+
         }
+
       ],
 
       chatContactIndex: 0,
       selectedContactIndex: -1,
+      newMessage: '',
 
     }
 
@@ -184,6 +190,27 @@ createApp({
 
       this.chatContactIndex = contactIndex;
       this.selectedContactIndex = contactIndex;
+
+    },
+
+    addMessage(index) {
+
+      if (this.newMessage !== '') {
+
+        const newMessageObj = {
+
+          time: '00:00',
+          message: this.newMessage,
+          status: 'sent'
+
+        };
+
+        this.contacts[index].messages.push(newMessageObj);
+        this.newMessage = '';
+
+      }
+
+      
 
     },
 

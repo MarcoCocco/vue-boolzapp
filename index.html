@@ -67,7 +67,7 @@
                             <img :src="contact.avatar" alt="">
                         </div>
                         <div class="profile-info">
-                            <h4>{{contact.name}}</h4>
+                            <h4>{{ contact.name }}</h4>
                             <p><i :style="contacts[index].messages[contacts[index].messages.length - 1].status === 'received' ? {display: 'none'} : {display: 'inlineBlock'}"
                                     class="fa-solid fa-check-double"></i> {{
                                 contacts[index].messages[contacts[index].messages.length - 1].message }}</p>
@@ -91,7 +91,7 @@
                             <img :src="contacts[chatContactIndex].avatar" alt="">
                         </div>
                         <div class="active-name">
-                            <h4>{{contacts[chatContactIndex].name}}</h4>
+                            <h4>{{ contacts[chatContactIndex].name }}</h4>
                             <div class="last-access">
                                 <p>Online</p>
                             </div>
@@ -135,10 +135,13 @@
                         <div class="hover-icon"><i class="fa-solid fa-paperclip"></i></div>
                     </div>
                     <div class="text-message">
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input v-model="newMessage" @keyup.enter="addMessage(chatContactIndex)" type="text" placeholder="Scrivi un messaggio">
                     </div>
                     <div class="rec-voice">
-                        <div class="hover-icon"><i class="fa-solid fa-microphone"></i></div>
+                        <div class="hover-icon">
+                            <i :style="newMessage !== '' ? {display: 'none'} : {display: 'block'}" class="fa-solid fa-microphone"></i>
+                            <i @click="addMessage(chatContactIndex)" :style="newMessage !== '' ? {display: 'block'} : {display: 'none'}" class="fa-regular fa-paper-plane"></i>
+                        </div>
                     </div>
                 </div>
 

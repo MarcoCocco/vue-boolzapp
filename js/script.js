@@ -218,17 +218,6 @@ createApp({
 
     },
 
-    created() {
-
-      setInterval(() => {
-
-        let date = new Date();
-
-        this.currentTime = date.toLocaleTimeString();
-
-      }, 1000);
-    }
-
   }
 
 }).mount('#app')

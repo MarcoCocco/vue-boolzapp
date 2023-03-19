@@ -110,7 +110,7 @@ createApp({
         },
         {
           name: 'Claudia',
-          avatar: './img/avatar_5.jpg',
+          avatar: './img/avatar_6.jpg',
           visible: true,
           messages: [
             {
@@ -179,8 +179,10 @@ createApp({
       chatContactIndex: 0,
 
       selectedContactIndex: -1,
-      
+
       newMessage: '',
+
+      newResponse: '',
 
     }
 
@@ -200,20 +202,41 @@ createApp({
       if (this.newMessage !== '') {
 
         let date = new Date();
-        let options = { hour: 'numeric', minute: 'numeric' };
-        let time = date.toLocaleTimeString('it-IT', options);
+        let timeOptions = { hour: 'numeric', minute: 'numeric' };
+        let time = date.toLocaleTimeString('it-IT', timeOptions);
 
-        const newMessageObj = {
+        let newMessageObj = {
 
           time: time,
           message: this.newMessage,
-          status: 'sent',
+          status: 'sent'
 
         };
 
         this.contacts[index].messages.push(newMessageObj);
         this.newMessage = '';
 
+        if (this.newMessage === '') {
+
+          setTimeout(() => {
+
+            newMessageObj = {
+
+              time: time,
+              message: 'Ok!',
+              status: 'received'
+
+            }
+
+            this.contacts[index].messages.push(newMessageObj);
+            this.newMessage = '';
+
+          }, 2000);
+
+          
+
+        }
+        
       }
 
     },

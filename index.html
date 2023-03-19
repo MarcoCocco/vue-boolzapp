@@ -68,12 +68,11 @@
                         </div>
                         <div class="profile-info">
                             <h4>{{ contact.name }}</h4>
-                            <p><i :style="contacts[index].messages[contacts[index].messages.length - 1].status === 'received' ? {display: 'none'} : {display: 'inlineBlock'}"
-                                    class="fa-solid fa-check-double"></i> {{
-                                contacts[index].messages[contacts[index].messages.length - 1].message }}</p>
+                            <p><i :style="contact.messages[contact.messages.length - 1].status === 'sent' ? {display: 'inlineBlock'} : {display: 'none'}" class="fa-solid fa-check-double"></i> {{
+                                contact.messages[contact.messages.length - 1].message }}</p>
                         </div>
                         <div class="time">
-                            <p>{{ contacts[index].messages[contacts[index].messages.length - 1].time }}</p>
+                            <p>{{ contact.messages[contact.messages.length - 1].time }}</p>
                         </div>
                     </div>
 

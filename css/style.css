@@ -291,6 +291,7 @@ body {
     display: flex;
     flex-direction: column;
     align-self: flex-end;
+    gap: 3px;
     background-color: #025c4c;
 }
 
@@ -309,6 +310,7 @@ body {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+    gap: 3px;
     background-color: #373737;
 }
 

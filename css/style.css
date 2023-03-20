@@ -198,12 +198,16 @@ body {
 .main-container .col-2 .chat-list .single-chat .profile-info p {
     margin-top: 5px;
     font-size: .8em;
-    opacity: .4;
+    color: #737373;
 }
 
 .main-container .col-2 .chat-list .single-chat .time {
     font-size: .8em;
     opacity: .4;
+}
+
+#is-typing {
+    color: #01a481;
 }
 
 /*------------------------------*/
@@ -283,6 +287,12 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     gap: 5px;
+}
+
+#menu {
+    width: 200px;
+    height: 200px;
+    background-color: #2e2e2e;
 }
 
 .main-container .col-3 .active-chat .chat-container-centered .message-container {

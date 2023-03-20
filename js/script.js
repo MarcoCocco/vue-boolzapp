@@ -184,6 +184,8 @@ createApp({
 
       contactSearch: '',
 
+      isTyping: false,
+
     }
 
   },
@@ -213,6 +215,8 @@ createApp({
 
         };
 
+
+
         this.contacts[index].messages.push(newMessageObj);
         this.newMessage = '';
 
@@ -230,8 +234,11 @@ createApp({
 
             this.contacts[index].messages.push(newMessageObj);
             this.newMessage = '';
+            this.isTyping = false;
 
           }, 2000);
+
+          this.isTyping = true;
 
         }
 

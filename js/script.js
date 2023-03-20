@@ -182,7 +182,7 @@ createApp({
 
       newMessage: '',
 
-      newResponse: '',
+      contactSearch: '',
 
     }
 
@@ -242,7 +242,24 @@ createApp({
     addSelectedClass() {
 
       this.selectedSearchInput = true;
-      console.log(this.selectedSearchInput)
+
+    },
+
+    contactSearchList() {
+
+      this.contacts.forEach(contact => {
+
+        if (contact.name.toLowerCase().includes(this.contactSearch.toLowerCase())) {
+
+          contact.visible = true;
+
+        } else {
+
+          contact.visible = false;
+
+        }
+
+      });
 
     },
 

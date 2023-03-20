@@ -51,8 +51,9 @@
                         <div class="hover-icon"><i class="fa-solid fa-ellipsis"></i></div>
 
                     </div>
+                    
                     <div class="search-chat-input">
-                        <input @click="addSelectedClass()" :id="selectedSearchInput === true ? 'selected-search-input' : '' " type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input @click="addSelectedClass()" @keyup="contactSearchList()" v-model="contactSearch" :id="selectedSearchInput === true ? 'selected-search-input' : '' " type="text" placeholder="Cerca o inizia una nuova chat">
                         <div id="search-icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
@@ -62,7 +63,7 @@
 
                 <div class="chat-list">
 
-                    <div v-for="(contact, index) in contacts" @click="changeContactIndex(index)" :class="{ 'single-chat-selected': index === selectedContactIndex }" class="single-chat">
+                    <div v-for="(contact, index) in contacts" @click="changeContactIndex(index)" v-show="contact.visible" :class="{ 'single-chat-selected': index === selectedContactIndex }" class="single-chat">
                         <div class="profile-img">
                             <img :src="contact.avatar" alt="">
                         </div>

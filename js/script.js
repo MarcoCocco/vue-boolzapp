@@ -215,10 +215,24 @@ createApp({
 
         };
 
-
-
         this.contacts[index].messages.push(newMessageObj);
         this.newMessage = '';
+
+        const randomMessages = [
+          'Ok. Adesso devo andare, ciao!',
+          'Non importa.',
+          'Devo andare a fare compere oggi',
+          'Ma cosa dici? HAHAHAHAHAH',
+          'Davvero? Non l\'avrei mai detto bro',
+          'Che cosa orribile da dire',
+          'Non penso sia come dici tu..',
+          'Non lo sapevo, scusami tanto',
+          'Mi sto divertendo un sacco rispondendoti con cose che non hanno senso hahahahahah'
+        ];
+
+        const randomIndex = Math.floor(Math.random() * randomMessages.length);
+        const randomMessage = randomMessages[randomIndex];
+
 
         if (this.newMessage === '') {
 
@@ -227,7 +241,7 @@ createApp({
             newMessageObj = {
 
               time: time,
-              message: 'Ok. Adesso devo andare, ciao!',
+              message: randomMessage,
               status: 'received'
 
             }

@@ -52,7 +52,7 @@
 
                     </div>
                     <div class="search-chat-input">
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input @click="addSelectedClass()" :id="selectedSearchInput === true ? 'selected-search-input' : '' " type="text" placeholder="Cerca o inizia una nuova chat">
                         <div id="search-icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>

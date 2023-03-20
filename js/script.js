@@ -168,9 +168,7 @@ createApp({
               status: 'received'
             },
 
-
           ],
-
 
         }
 
@@ -179,6 +177,8 @@ createApp({
       chatContactIndex: 0,
 
       selectedContactIndex: -1,
+
+      selectedSearchInput: false,
 
       newMessage: '',
 
@@ -223,7 +223,7 @@ createApp({
             newMessageObj = {
 
               time: time,
-              message: 'Ok!',
+              message: 'Ok. Adesso devo andare, ciao!',
               status: 'received'
 
             }
@@ -233,11 +233,16 @@ createApp({
 
           }, 2000);
 
-          
-
         }
-        
+
       }
+
+    },
+
+    addSelectedClass() {
+
+      this.selectedSearchInput = true;
+      console.log(this.selectedSearchInput)
 
     },
 

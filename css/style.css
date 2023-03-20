@@ -117,6 +117,12 @@ body {
     position: relative;
 }
 
+#selected-search-input {
+    border:1px solid #343434;
+    border-bottom: 2px solid #00a884;
+    background-color: #212121;
+}
+
 .main-container .col-2 .chat-options .search-chat-input input {
     width: 100%;
     padding: 8px 0;
@@ -124,7 +130,7 @@ body {
     padding-right: 33px;
     background-color: #343434;
     border: none;
-    border-bottom: 3px solid #7a7a7a;
+    border-bottom: 2px solid #7a7a7a;
     border-radius: 5px;
     color: white;
     font-family: 'Roboto', sans-serif;

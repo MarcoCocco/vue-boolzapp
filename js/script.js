@@ -176,7 +176,7 @@ createApp({
 
       chatContactIndex: 0,
 
-      selectedContactIndex: -1,
+      selectedContactIndex: null,
 
       selectedSearchInput: false,
 
@@ -232,7 +232,6 @@ createApp({
 
         const randomIndex = Math.floor(Math.random() * randomMessages.length);
         const randomMessage = randomMessages[randomIndex];
-
 
         if (this.newMessage === '') {
 

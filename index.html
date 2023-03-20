@@ -73,10 +73,12 @@
                         </div>
                         <div class="profile-info">
                             <h4>{{ contact.name }}</h4>
-                            <p :style="{display: chatContactIndex === index && isTyping ? 'none' : 'block'}"><i :style="contact.messages[contact.messages.length - 1].status === 'sent' ? {display: 'inlineBlock'} : {display: 'none'}"
+                            <p :style="{display: chatContactIndex === index && isTyping ? 'none' : 'block'}"><i
+                                    :style="contact.messages[contact.messages.length - 1].status === 'sent' ? {display: 'inlineBlock'} : {display: 'none'}"
                                     class="fa-solid fa-check-double"></i> {{
                                 contact.messages[contact.messages.length - 1].message }}</p>
-                                <p :style="{display: chatContactIndex === index && isTyping ? 'block' : 'none'}" id="is-typing">Sta scrivendo...</p>
+                            <p :style="{display: chatContactIndex === index && isTyping ? 'block' : 'none'}"
+                                id="is-typing">Sta scrivendo...</p>
                         </div>
                         <div class="time">
                             <p>{{ contact.messages[contact.messages.length - 1].time }}</p>
@@ -87,7 +89,14 @@
 
             </div>
 
-            <div class="col-3">
+            <div :style="selectedContactIndex === null ? {display: 'flex'} : {display: 'none'}" id="welcome-message">
+                <i class="fa-brands fa-whatsapp"></i>
+                <h3>Boolzapp per Windows</h3>
+                <p>Invia e ricevi messaggi senza mantenere il telefono connesso a Internet. <br>
+                    Usa Boolzapp su un massimo di 4 dispositivi e 1 telefono contemporaneamente.</p>
+            </div>
+
+            <div :style="selectedContactIndex === null ? {display: 'none'} : {display: 'flex'}" class="col-3">
 
                 <div class="active-chat-header">
 
